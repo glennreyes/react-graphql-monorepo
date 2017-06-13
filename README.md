@@ -1,5 +1,7 @@
 # react-graphql-example
 
+[![CircleCI](https://circleci.com/gh/glennreyes/msaldeart.svg?style=shield&circle-token=d214049b91c71d56dddd6eef3ed7103c01f71e75)](https://circleci.com/gh/glennreyes/msaldeart)
+
 A [lerna](https://github.com/lerna/lerna) monorepo example using [create-react-app](https://github.com/facebookincubator/create-react-app) & [GraphQL](https://github.com/facebook/graphql) backend ready for production.
 
 ## How to start

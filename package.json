@@ -1,9 +1,11 @@
 {
   "scripts": {
+    "build:app": "lerna exec --scope app yarn build",
     "postinstall": "lerna bootstrap --concurrency 1",
     "start": "lerna exec -- yarn start",
-    "start:app": "lerna exec --scope app yarn run start",
-    "start:graphql": "lerna exec --scope graphql yarn run start"
+    "start:app": "lerna exec --scope app yarn start",
+    "start:graphql": "lerna exec --scope graphql yarn start",
+    "test": "lerna exec --concurrency 1 -- yarn test"
   },
   "devDependencies": {
     "lerna": "^2.0.0-rc.5"

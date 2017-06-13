@@ -3,17 +3,17 @@ import { graphql, gql } from 'react-apollo';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   render() {
-    const { data: { site } } = this.props;
+    const { title, intro } = this.props;
 
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          {site && <h2>{site.title}</h2>}
+          {title && <h2>{title}</h2>}
         </div>
-        {site && <p className="App-intro">{site.intro}</p>}
+        {intro && <p className="App-intro">{intro}</p>}
       </div>
     );
   }
@@ -26,4 +26,9 @@ export default graphql(gql`
       intro
     }
   }
-`)(App);
+`, {
+  props: ({ data: { site } }) => ({
+    title: site && site.title,
+    intro: site && site.intro,
+  }),
+})(App);

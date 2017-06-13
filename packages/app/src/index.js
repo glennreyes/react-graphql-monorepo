@@ -10,7 +10,7 @@ const client = new ApolloClient({
   networkInterface: createNetworkInterface({ uri }),
 });
 
-const Root = () => (
+export const Root = () => (
   <ApolloProvider client={client}>
     <App />
   </ApolloProvider>
