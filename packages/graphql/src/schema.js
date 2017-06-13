@@ -7,7 +7,7 @@ const typeDefs = `
 
   type Site {
     title: String
-    description: String
+    intro: String
   }
 `;
 
@@ -17,7 +17,7 @@ const resolvers = {
   },
   Site: {
     title: () => 'Hello World!',
-    description: () => 'We ❤️ React & GraphQL!',
+    intro: () => 'We ❤️ React & GraphQL!',
   },
 };
 
