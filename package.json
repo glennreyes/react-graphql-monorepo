@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "postinstall": "lerna bootstrap --concurrency 1",
+    "start": "lerna exec -- yarn start",
+    "start:app": "lerna exec --scope app yarn run start",
+    "start:graphql": "lerna exec --scope graphql yarn run start"
+  },
+  "devDependencies": {
+    "lerna": "^2.0.0-rc.5"
+  }
+}

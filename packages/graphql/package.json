@@ -1,0 +1,38 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d build",
+    "start": "node index",
+    "test": "jest -i --coverage"
+  },
+  "author": "Glenn Reyes <glenn@glennreyes.com> (https://twitter.com/glnnrys)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-register": "^6.24.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "graphql": "^0.10.1",
+    "graphql-server-express": "^0.8.2",
+    "graphql-tools": "^1.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": true,
+            "jest": true
+          }
+        }
+      ]
+    ]
+  }
+}
